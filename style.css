@@ -1,0 +1,30 @@
+/* Reglas de CSS */
+
+/* Si se desea aplicar una regla para varios elementos
+simplemente basta con separarlas con comas */
+
+
+p, h1 {
+    color:lightblue;
+    background: peru;
+}
+
+
+/* Aplicaremos las clases, que lo que ofrecen es que pueden estar tantas
+veces como sea necesario */ 
+/* En CSS se definen .clase */
+
+.texto {
+    font-size: 5px;
+    font-weight: bold;
+}
+
+#texto {
+    font-size: 20px;
+    font-family: cursive;
+}
+
+section p {
+    color:darkred;
+}
+

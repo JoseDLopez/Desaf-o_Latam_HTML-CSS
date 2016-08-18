@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    
+    <style>
+        p {
+            color:greenyellow;
+            
+        }   
+    </style>
+    <!-- Se usa para definir cual sera el archivo que personalizará el documento -->
+    <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body style="background-color:grey">
    <h1>Primer Titulo</h1>
@@ -20,6 +29,57 @@
           <td style="background-color:black;color:white">Celda 4</td>         
       </tr>       
    </table>
+   
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque possimus tempora quam, accusamus illo fugit necessitatibus quos iure eius aut, reprehenderit beatae, dolore, saepe fuga omnis sequi harum quia maxime!</p>
+   
+   <!-- Una manera mas eficiente es con CSS, ya que este archivo permitiria asignar estos atributos
+   de estilo mas facilmente. -->
+   <!-- Para esto debemos agregar el tag Style, para agregar CSS -->
+   
+   <!-- Existen tres hojas de estilo, NAVEGADOR es la que tiene menos privilegios,
+   DESARROLLADOR pisa cualquier hoja de estilo del navegador,
+   USUARIO es la que tiene mayor privilegio. -->
+   
+   <!-- Las tres maneras de hacer la hoja del navegador son: INLINE tiene mayor prioridad,
+   STYLE, tiene segunda prioridad y Hoja de estilo .CSS la última prioridad. -->
+   
+   <!-- Si se requiere que una etiqueta sea personalizada con caracteristicas dejando a un lado 
+   la cascada se hce uso del atributo !important -->
+   
+    <!-- Aprendamos a usar la clase -->
+    
+    <p class="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere natus blanditiis facilis quos velit corrupti ullam exercitationem eos dolor aperiam praesentium voluptatem totam, id, pariatur cumque, tempora beatae atque, aliquam.</p>
+    
+    <p class="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut autem architecto itaque voluptas tenetur eveniet repellendus ex ratione consequatur. Sed sint reprehenderit aspernatur, praesentium optio id culpa dolor debitis molestias.</p>
+    
+    <p id="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius numquam quod sequi veritatis, ipsam, quo doloremque, eveniet inventore vel molestiae obcaecati est atque quae odit aperiam labore non quaerat animi.</p>
+    
+    
+    <section class="mysection">
+        <h2>Otros Selectores</h2>
+        
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, tempora cupiditate doloremque, nam impedit non cumque, praesentium et neque quae voluptatibus architecto possimus temporibus accusantium dolores tempore fugit. Quas, voluptates!</p>
+        
+        <ul id="Lista">
+           <li><a href="">Elemento 1</a></li>
+           <li><a href="">Elemento 2</a>
+           <ul>
+               <li><a href="">Elemento 2.1</a></li>
+               <li>Elemento 2.2</li>               
+           </ul>
+           </li>
+           <li>Elemento 3</li>
+           <li>Elemento 4</li>
+            
+        </ul>       
+        
+    </section>
+    
+    <!-- Tambien existen pseudo elementos, como por ejempo hover, visited, normal -->
+    <!-- Otro elemento interesante son los -->
+    
+    <h2>Pseudo Elementos</h2>
+    <h2>Titulo dos</h2>
     
     
 </body>
