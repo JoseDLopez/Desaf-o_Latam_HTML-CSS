@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto</title>
+</head>
+
+<body>
+   <form action="">
+      <p>Favor completar el siguiente formulario:</p>
+      
+      <fieldset>
+      <legend>Datos Básicos:</legend>
+       <label for="nombre">Nombre:</label>
+       <input type="text" name="nombre" id="nombre" value="" placeholder="Introduzca su nombre..." required>
+       <br>
+       
+       <label for="apellido">Apellido:</label>
+       <input type="text" name="apellido" id="apellido" value="" placeholder="Introduzca su apellido..." required>
+       <br>
+       
+       <label for="edad">Edad</label>
+       <input type="number" id="edad" name="edad" value="18" required>
+       <br>
+       
+       <label for="Masculino">Masculino</label>
+       <input type="radio" id="Masculino" name="Genero" value="">
+       <br>
+       <label for="Femenino">Femenino</label>
+       <input type="radio" id="Femenino" name="Genero" value="">
+       <br>
+       </fieldset>
+       
+       <label for="zona">Introduce la zona:</label>
+       <select name="zona" id="zona">
+           <option value="A">A</option>
+           <option value="B">B</option>
+           <option value="C">C</option>
+           <option value="D">D</option>
+           <option value="E">E</option>
+       </select>
+       <br>
+       
+       <label for="email">Introduce correo:</label>
+       <input type="email" name="email" id="email" value="" placeholder="example@mail.com" required>
+       <br>
+       
+       <label for="comentarios">Comentarios:</label>
+       <br>
+       <textarea name="comentarios" id="comentarios" cols="30" rows="10">Agregue sus comentarios...</textarea>
+       
+       <br>
+       <input type="submit" name="Enviar">       
+   </form>
+   
+   <a href="index.html">Regresar a pagina inicial</a>
+   
+    
+</body>
+
+</html>
