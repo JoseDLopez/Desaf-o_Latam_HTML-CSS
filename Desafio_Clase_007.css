@@ -1,0 +1,14 @@
+/** Stylesheet de Desafio Clase 7 */
+
+tr, td {
+    height: 15px;
+    width: 15px;
+}
+
+table {
+    background-color: orangered;
+}
+
+table tr:nth-child(odd) td:nth-child(even), table tr:nth-child(even) td:nth-child(odd){
+    background-color: darkgreen;
+}
