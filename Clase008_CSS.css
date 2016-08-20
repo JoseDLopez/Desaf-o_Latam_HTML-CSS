@@ -1,0 +1,95 @@
+/* Estilo para la clase 8 */
+
+html, body {
+/*    font-family: "Times New Roman", Georgia, serif;*/
+    /* Hoy en dice se dice que el tamaño ideal es de 16px, ya que esta orientado hacia
+    los telefonos moviles */
+    font-size: 16px;
+    font-family: 'Poiret One', cursive;
+
+}
+
+p {
+/*    font-size: 20px;*/
+    font-weight: bold; /* Aumenta el tamaño de enegrecimiento o gordura del texto */
+    /* Es distinto al tipografia BOLD */
+    
+    /*Se define el interlineado de la tipografia con line-height, que es la diferencia entre una linea con otra */
+    line-height: 20px;   
+}
+ 
+/*TAMAÑOS DE MEDIDAS RELATIVAS */
+    /****************
+    *    MEDIDA em  *
+    ****************/
+    /*Se define en "em" que es la unidad, esto significa que 1em, busca el tamaño tipografico
+    definido en pixeles del padre. */
+
+#soy_em  {
+    font-size: 1.8em;
+}
+
+    /****************
+    *    MEDIDA rem *
+    ****************/
+    /*Funciona como em, pero siempre haciendo referencia al html. */
+
+#soy_rem {
+    font-size: 2rem;
+}
+
+    /****************
+    *    MEDIDA vw *
+    ****************/
+    /*1vh representa 1% del tamaño total de la pantalla Viewport */
+
+#soy_vw {
+    font-size: 10vw;
+}
+
+    /****************
+    *    MEDIDA vh *
+    ****************/
+    /*1vh representa 1% del tamaño total de la pantalla Viewport */
+#soy_vh {
+    font-size: 10vh;
+}
+
+
+
+    /****************
+    *    MEDIDA vmin *
+    ****************/
+    /*1vmin representa 1% del tamaño total de la pantalla mas pequeña */
+
+    /****************
+    *    MEDIDA vmax *
+    ****************/
+    /*1vmax representa 1% del tamaño total de la pantalla mas grande */
+
+
+/* Existen varias maneras de introducir varias tipografias en la web */
+/* Google fONTS es muy buen servicio de tipografias, puedes utilizar 
+multiples tipografias abiertas y safes */
+/* Se pueden convertir tipografias con fontface, una herramienta es fontsquirrel*/
+
+/*Podemos tener estilos para la fuente y alineamiento con font-style y font-allign */
+
+/* Existen elementos de bloque (div, p, h, listas) y de linea(span, strong, a, img) */
+
+/* Los elementos bloque si se pueden centrar, los elementos en linea no */
+
+
+h1 {
+    text-align: center;
+}
+
+/* El modelo de caja o box model indica que todo elemento tiene margen, relleno, borde, elemento. */
+/* El tamaño completo de un elemento es la suma de el borde, margen y padding.
+
+Existe un modelo que se llama borderbox, que implica que los elementos mantengan el elemento mas grande */
+/* se hace con box-sizing: border-box */
+
+/* Se puede cambiar la manera en que se muestra un elemento, con la propiedad display */
+
+
