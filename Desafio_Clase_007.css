@@ -1,13 +1,23 @@
 /** Stylesheet de Desafio Clase 7 */
 
+/* Especificamos que las dimensiones del cuadrado son 15 pixeles
+de alto y 15 pixeles de ancho. */
+
 tr, td {
     height: 15px;
     width: 15px;
 }
 
+/* Pintamos el tablero de color naranja */
 table {
     background-color: orangered;
 }
+
+/* Procedemos a pintar las celdas que nos interesan que sean verdes.
+Para ello, realizamos las siguientes indicaciones:
+    1.- Tomamos las filas pares y las celdas impares.
+    2.- Tomamos las filas impares y las celdas pares.
+    3. Coloreamos de verde las seleccionadas. */
 
 table tr:nth-child(odd) td:nth-child(even), table tr:nth-child(even) td:nth-child(odd){
     background-color: darkgreen;
