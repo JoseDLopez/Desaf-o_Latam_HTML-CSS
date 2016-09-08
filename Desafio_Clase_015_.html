@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Desafío Piedra Papel o Tijeras</title>
+</head>
+<body>
+    <h1>Juego en javascript de piedra papel o tijera</h1>
+    
+    <script>
+        /*Se le debe pedir el input al usuario, la máquina escoge al azar ocupando Math.floor((Math.random() * 3))
+        el juego debe determinar quien ganó o si hubo empate.
+        */
+        
+        var jugador1 = window.prompt("Jugador 1, piedra, papel o tijeras");
+        var jugador2 = Math.floor((Math.random()*3)+1);
+
+        if (jugador2 == 1){
+            jugador2 = "piedra";
+        }else if (jugador2 == 2) {
+            jugador2 = "papel";
+        }else if (jugador2 ==3){
+            jugador2 = "tijeras";
+        }
+        
+        if (jugador1 != "piedra" && jugador1 != "papel" && jugador1 != "tijeras"){
+            alert("Jugador 1, favor introduce una de las tres opciones: piedra, papel o tijeras");
+        }
+        else if (jugador1 == jugador2){
+            alert("EMPATE");
+        }else {
+        
+        
+        if (jugador1 == "piedra" && jugador2 == "papel"){
+            alert("Gana jugador2 con " + jugador2 + " y pierde jugador1 con " + jugador1);}
+            else if  (jugador1 == "piedra" && jugador2 == "tijeras"){
+                alert("Gana jugador1 con " + jugador1 + " y pierde jugador2 con " + jugador2);
+        }
+        
+        if (jugador1 == "papel" && jugador2 == "piedra"){
+            alert("Gana jugador1 con " + jugador1 + " y pierde jugador2 con " + jugador2);}
+            else if (jugador1 == "papel" && jugador2 == "tijeras"){
+                alert("Gana jugador2 con " + jugador2 + " y pierde jugador1 con " + jugador1);
+                
+        }
+        
+        if (jugador1 == "tijeras" && jugador2 == "piedra"){
+            alert("Gana jugador2 con " + jugador2 + " y pierde jugador1 con " + jugador1);}
+            else if (jugador1 == "papel" && jugador2 == "papel") {
+                alert("Gana jugador1 con " + jugador1 + " y pierde jugador2 con " + jugador2);
+                
+        }
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </script>
+    
+    
+    
+</body>
+</html>
