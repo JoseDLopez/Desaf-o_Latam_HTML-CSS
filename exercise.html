@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body {
+			margin:0;
+			padding: 0; 
+			margin-top: 60px; 
+		}
+		.box {
+			background: red;
+			color: white;
+			/* height: 100px; */
+			
+			width: 300px;
+			position: relative;
+		}
+		.box-fixed {
+			background: #CCC;
+			height: 50px;
+			position: fixed;
+			top: 0;
+			
+			width: 600px;
+			margin: 0 auto;
+			z-index: 1;
+		}
+		.icon {
+			background: url('Shopping-Sale-icon.png') no-repeat ;
+			position: absolute;
+			top: 0;
+			right: -15px;
+			width: 32px;
+			height: 32px;
+		}
+	
+		.box-container {
+			width: 400px;
+			border: 1px solid #000000;	
+		}
+			.box-container .caption{
+				position: relative;
+				background: rgba(120, 120, 120,0.8);
+				height: 100px;
+				margin-top: -120px;
+			}
+				.box-container .caption p {
+					text-align: center;
+				}
+	</style>
+</head>
+<body>
+	<div class="box-fixed">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio omnis tempora culpa porro tenetur dolorum dicta. Eveniet quo, non, officiis a adipisci est. Ratione quas corporis dignissimos, minus, sequi quae!</p>
+	</div> 
+	<div class="box ">
+		<div class="icon"></div>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non excepturi esse, voluptas quia rerum doloremque porro, sapiente dolor voluptate distinctio ullam, ipsum quam fugiat accusamus ipsam itaque eius nihil! Soluta.</p>
+	</div>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident nemo labore voluptatibus, repellendus nam quia cupiditate quas. Deserunt sequi eos consequuntur nulla soluta, tempora deleniti explicabo. Nostrum culpa illo quae.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident nemo labore voluptatibus, repellendus nam quia cupiditate quas. Deserunt sequi eos consequuntur nulla soluta, tempora deleniti explicabo. Nostrum culpa illo quae.</p>
+	
+	<div class="box-container">
+		<img src="http://lorempixel.com/400/200" alt="">
+		<div class="caption">
+			<p>Hola</p>
+		</div>
+	</div>
+
+	<hr>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam praesentium minima quibusdam laboriosam, aspernatur aliquid labore, excepturi quas explicabo magni perferendis, expedita est? Eligendi repellendus quidem doloribus, neque assumenda dolor?</p>
+</body>
+</html>

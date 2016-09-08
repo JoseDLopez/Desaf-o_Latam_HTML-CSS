@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio Piedra, papel o tijeras</title>
+</head>
+<body>
+   <h1>Ejercicio: Piedra, papel o tijeras.</h1>
+
+    <script>
+        var jugador1 = window.prompt("Jugador 1, piedra, papel o tijeras");
+        var jugador2 = window.prompt("Jugador 2, piedra, papel o tijeras");
+        
+        if (jugador1 != "piedra" && jugador1 != "papel" && jugador1 != "tijeras"){
+            alert("Jugador 1, favor introduce una de las tres opciones: piedra, papel o tijeras");
+        }
+        else if (jugador2 != "piedra" && jugador2 != "papel" && jugador2 != "tijeras"){
+            alert("Jugador 2, favor introduce una de las tres opciones: piedra, papel o tijeras");
+        }
+        else if (jugador1 == jugador2){
+            alert("EMPATE");
+        }
+        
+        
+        if (jugador1 == "piedra" && jugador2 == "papel"){
+            alert("Gana jugador2 con papel");}
+            else if  (jugador1 == "piedra" && jugador2 == "tijeras"){
+                alert("Gana jugador1 con piedra");
+        }
+        
+        if (jugador1 == "papel" && jugador2 == "piedra"){
+            alert("Gana jugador1 con papel");}
+            else if (jugador1 == "papel" && jugador2 == "tijeras"){
+                alert("Gana jugador2 con tijeras");
+                
+        }
+        
+        if (jugador1 == "tijeras" && jugador2 == "piedra"){
+            alert("Gana jugador2 con piedra");}
+            else if (jugador1 == "papel" && jugador2 == "papel") {
+                alert("Gana jugador1 con tijeras");
+                
+        }
+            
+            
+            
+    </script>
+    
+</body>
+</html>

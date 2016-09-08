@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clase 20, OBJETOS</title>
+</head>
+<body>
+   <h1>OBJETOS</h1>
+   
+    <script>
+        //Crear el bojeto diego, diego tiene propiedad nombrecon el valor diego y edad 28.
+        //Crear el objeto juan, juan tiene propiedad nombre con el valor juan y edad 27.
+        
+        var diego ={};
+        var juan = new Object();
+        
+        juan["nombre"]="juan";
+        diego["nombre"]="diego";
+        
+        diego["edad"]=28;
+        juan["edad"]=27;
+        
+        var jose = {
+            nombre : "jose",
+            edad : 25,
+            numero : 3446623
+        }
+        
+        
+        //A los objetos se les puede agregar acciones, estas se definen cmo una funcion.
+        //Escomo si se llamara aun metodo.
+        
+        var maria = {
+            nombre : "Maria",
+            edad : 20,
+            
+            ejemplo_funcion : function (obj) {
+                console.log("Mi nombre es Maria y saludo a " + obj.nombre);
+        }
+        }
+        
+        // las funciones se puede anidar y ademas pueden interactuar con ellas mismas:
+        
+            var carla = {
+            nombre : "Carla",
+            edad : 27,
+            
+            ejemplo_funcion : function (obj) {
+                console.log("Mi nombre es " + this.nombre +  " y saludo a " + obj.nombre);
+            },
+            
+            comparar_edad : function (obj){
+                if (this.edad == obj.edad){
+                    console.log(this.nombre + " y " + obj.nombre + " tienen la misma edad.")
+                }else if (this.edad > obj.edad){
+                    console.log(this.nombre + " es mayor que " + obj.nombre)
+                }else {
+                    console.log(this.nombre + " es menor que " + obj.nombre)
+                }
+            }
+        }
+        
+        // Para arreglar el caso en que el objeto al que se hace referencia no tiene esa propiedad se hace:
+          
+            var francis = {
+            nombre : "Francis",
+            edad : 26,
+            
+            ejemplo_funcion : function (obj) {
+                console.log("Mi nombre es " + this.nombre +  " y saludo a " + obj.nombre);
+            },
+            
+            comparar_edad : function (obj){
+                if ("edad" in obj){
+                if (this.edad == obj.edad){
+                    console.log(this.nombre + " y " + obj.nombre + " tienen la misma edad.")
+                }else if (this.edad > obj.edad){
+                    console.log(this.nombre + " es mayor que " + obj.nombre)
+                }else {
+                    console.log(this.nombre + " es menor que " + obj.nombre)
+                }
+                }else {
+                    console.log(obj.nombre + " No tiene edad")
+                }
+            }
+        }    
+            
+            var marco = {
+            nombre : "Marco",
+        }    
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio Mayor de 3 Numeros</title>
+</head>
+<body>
+   <h1>Ejercicio: Introduzca 3 numeros, y se indicará cual es el mayor.</h1>
+
+    <script>
+        var numero1 = window.prompt("Introduce el primer numero:");
+        var numero2 = window.prompt("Introduce el segundo numero:");
+        var numero3 = window.prompt("Introduce el tercer numero:");
+        
+        numero1=parseInt(numero1);
+        numero2=parseInt(numero2);
+        numero3=parseInt(numero3);
+        
+        if (numero1 == numero2 && numero2 == numero3){
+            alert("Los tres numero son iguales, favor introducir numeros distintos");
+        }
+        
+        else if (numero1 == numero2 || numero1 == numero3 || numero2 == numero3){
+            alert("Existen dos numeros iguales, favor asegurate de que los tres sean distintos");
+        }
+        else if (numero1 > numero2 && numero1 > numero3){
+            alert("El numero " + numero1 + " es el mayor");
+        }
+        else if (numero2 > numero1 && numero2 > numero3){
+            alert("El numero " + numero2 + " es el mayor");
+        }
+        else if (numero3 > numero1 && numero3 > numero2){
+            alert("El numero " + numero3 + " es el mayor");
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,21 @@
+html {
+box-sizing: border-box;
+}
+*,*:before,*:after{
+box-sizing:inherit;
+}
+
+
+.left {
+    background: red;
+    height: 100px;
+    width: 100px;
+    margin: 5px;
+/*    display: inline;*/
+    float: left;
+
+}
+
+.limpiar {
+    clear: left;
+}

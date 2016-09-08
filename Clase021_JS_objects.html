@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Desafío Alumnos</title>
+
+</head>
+<body>
+   <h1>COMPAÑERITOS</h1>
+   
+    <script>
+        /*Crear una clase constructora para Alumnos con los siguientes atributos nombre, edad y
+        género. Luego crear diferentes instancias de alumnos (mínimo 6 alumnos). Con cada instancia
+        construir un arreglo de objetos.*/
+        
+        
+        /*Crearemos una clase constructora que nos permitirá ser el molde
+        para poder crear alumnos a partir de esta clase */
+        
+        function Alumno(nombre,edad,genero){
+            this.nombre=nombre;
+            this.edad=edad;
+            this.genero=genero;
+        }
+        
+        var jose = new Alumno("José",25,1);
+        var maria = new Alumno("Maria",18,2);
+        var carlos = new Alumno("Carlos",28,1);
+        var pedro = new Alumno("Pedro",23,1);
+        var javier = new Alumno("Javier",24,1);
+        var juan = new Alumno("Juan",30,1);
+        var carla = new Alumno("Carla",29,2);
+        var susana = new Alumno("Susana",25,2);        
+        
+        var compañeros = [jose,maria,carlos,pedro,javier,juan,carla,susana];
+        
+        var sum_edad_mujeres=0;
+        var sum_edad_hombres=0;
+        var sum_todas_edades=0;
+        
+        
+        function muestra_mujeres (personas) {
+            var arr_mujeres=[];
+            compañeros.forEach(function(valor){
+                if (valor.genero == 2){
+                    arr_mujeres.push(valor.nombre);
+                }
+            })
+            console.log(arr_mujeres);
+        }
+        
+        
+        
+        
+        function muestra_hombres (personas) {
+            var arr_hombres=[];
+            compañeros.forEach(function(valor){
+                if (valor.genero == 1){
+                    arr_hombres.push(valor.nombre);
+                }
+            })
+            console.log(arr_hombres);
+        }
+        
+        
+        
+        
+        function edades_mujeres (personas) {
+            var sum_edad_mujeres=0;
+            compañeros.forEach(function(valor){
+                if (valor.genero == 2){
+                    sum_edad_mujeres += valor.edad;
+                }
+            })
+            console.log(sum_edad_mujeres);
+        }
+        
+        
+        
+        
+        function edades_hombres (personas) {
+            var sum_edad_hombres=0;
+            compañeros.forEach(function(valor){
+                if (valor.genero == 1){
+                    sum_edad_hombres += valor.edad;
+                }
+            })
+            console.log(sum_edad_hombres);
+        }
+        
+        
+        function edades_totales (personas) {
+            var sum_edades=0;
+            compañeros.forEach(function(valor){
+                sum_edades += valor.edad;
+            })
+            console.log(sum_edades);
+        }
+        
+        
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicios clase 16</title>
+</head>
+<body>
+   <h1>Ejercicios</h1>
+
+    <script>
+        
+        var i =0;
+        
+        console.log("Numeros del 0 al 10");
+        
+        for (i=0;i<=10;i++){
+            console.log(i);
+        }
+        
+        
+        console.log("Numeros del 0 al 10, pero solo 3, 7 y 9");
+        
+        for (i=0;i<=10;i++){
+            if (i==3 || i==7 || i==9){
+            console.log(i);}
+        }
+        
+        console.log("Numeros del 0 al 10, excpeto el 5");
+        
+        for (i=0;i<=10;i++){
+            if (i!=5){
+            console.log(i);}
+        }
+        
+        
+        console.log("Imprimir los numeros pares hasta el 50");
+        var resto;
+        for (i=1;i<=50;i++){
+            resto = 0;
+            resto = i % 2;
+            if (resto == 0){
+            console.log(i);}
+        }
+        
+//        console.log("Debe sumar N numeros depende de lo que introduzca el usuario");
+//        var n = parseInt(window.prompt("introduce"));
+//        var suma;
+//        var i;
+//        
+//        i=0;
+//        suma=0;
+//        while (i<=n) {
+//        suma = n-i+suma;
+//        i++;
+//        console.log(suma);
+//        }
+        
+        var tamanom = 2;
+        var tamanon = 5;
+        for (var i = 0; i<tamanom;i++){
+            for (var j=0;j<tamanon;j++){
+                document.write("*");
+            }
+            document.write("<br>");
+            
+        }
+ 
+            
+            
+            
+    </script>
+    
+</body>
+</html>

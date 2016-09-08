@@ -1,0 +1,46 @@
+/* Style de prueba */
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+.main{
+    background: url('http://lorempixel.com/1280/400/') center center;
+    background-size: cover;
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+
+.main .headline{
+    text-transform: uppercase;
+    color: aliceblue;
+    font-size: 46px;
+    text-align: center;
+}
+
+.main .call-to-action {
+    text-align: center;
+}
+
+.main .headline-caption {
+    color: aliceblue;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.main .navbar-latam{
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.navbar-latam .navbar-brand img {
+    width: 180px;
+}
+.navbar-collapse .navbar-right li a{
+    color: coral;
+}
+
+.main .wrapper {
+    padding-top: 30px;
+    padding-bottom: 60px;
+    background: rgba(0, 0, 0, 0.8);
+}

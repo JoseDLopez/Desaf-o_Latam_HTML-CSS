@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays, clase 18</title>
+</head>
+<body>
+   <h1>Arrays clase 18</h1>
+   
+   <script>
+    //Existe dos maneras de declarar los ARREGLOS:
+       
+       //FORMAL:
+//       
+//       var nombre_array = new Array();
+//       
+//       // Informal
+//       
+//       var arr =[];
+//       
+//       arr = ["Lunes", "Martes", "Miercoles","Jueves"];
+//       
+//       var meses = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+//       
+//       //Para saber la longitud de un arreglo se usa
+//       meses.length;
+//       
+//       //Para ordenar se puede usar sort
+//       
+//       meses.sort;
+//       
+//       // Si se desea adicionar un elemento se usa push
+//       
+//       meses.push("Mes_Extra");
+//       
+//       // Con el pop se puede eliminar el ulñtimo de la cola.
+//       
+//       meses.pop;
+//       
+//       // Con unshift es un push por la izquierda
+//       
+//       meses.unshift("Soy_MES_EXTRA_IZQ");
+//       
+//       // con shift escomo un pop pero por las izquierda
+//       
+//       meses.shift;
+//       
+//       //Con INDEX OF se puede saber la posicion de ese elemento. Si existe devuelve el index, sino devuelve -1
+//       
+//       meses.indexOf("Marzo");
+       
+    var meses = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+    
+//    function existe_valor (x) {
+//        var arreglo = meses.indexOf(x);
+//        if (arreglo < 0){
+//            console.log("El valor no existe");
+//            alert("El valor no existe");
+//        }else {
+//            console.log("Si existe");
+//            alert("Si existe");
+//        }
+//    }
+//    
+//    var int_usuario=window.prompt("Introduzca mes a confirmar")
+//    existe_valor(int_usuario);
+//    
+//       
+//       //Ahora queremos imprimir todos los elementos de un arreglo:
+//       
+//       for (var i =0;i<meses.length;i++){
+//           console.log(meses[i]);
+//       }
+//       
+//    
+//    //Si queremos hacer una iteracion de arerglos se hace:
+//       
+//    var amigos = ["Hugo","Paco","Luis"];
+//    
+//    amigos.forEach(function(valor,indice){
+//        console.log(valor +":"+indice);
+//    }); //Se encarga de recorrerel elemento, el primer parametro es una funcion anonima, que se le debe especificar el indice y el elemento.
+//       
+//       
+//       
+       
+    //EJERCICIO DEL ARREGLO DE MESES CREAR UN ARREGLO SOLO CON LOS MESES PARES
+    var meses_pares = [];
+    meses.forEach(function(valor,indice){
+        if (indice % 2 != 0){
+            meses_pares.push(meses[indice]);
+        }
+    })
+    console.log(meses_pares);
+       
+    
+    //Ejercicio, crear una funcion que reciba una frase como parametro y devuelva las vocales:
+       
+    var frase = window.prompt("Introduzca frase a deletrear");
+    var arr_frase =[];
+    arr_frase = frase.split("");
+    console.log(arr_frase);
+       
+    // CON FILTER
+    var consonantes=[];
+    var vocales=[];
+    
+    function con_voc (letra){
+        if (letra == "a" || letra == "e" || letra == "i" || letra == "o" || letra == "u") {
+            return true;
+        }else {
+            return false;
+        }
+    }
+    
+    vocales = arr_frase.filter(con_voc);
+    console.log(vocales);
+       
+       var a = [1,2,3,4,5,6,"Maaaaambo"];
+       for (x in a){
+           console.log(x[a]);
+       }
+       
+       
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,46 @@
+html  {
+    width: 2000px;
+      box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+header {
+    height: 100px;
+    width: 900px;
+    border: red 2px solid;
+    margin-left: 25px;
+}
+
+section {
+    border: violet 2px solid;
+/*
+    height: 700px;
+    width: 1000px;
+*/
+}
+
+
+section article {
+    height: 500px;
+    width: 700px;
+    border: green 2px solid;
+    float: left;
+    margin-left: 25px;
+}
+
+section aside {
+    height: 500px;
+    width: 200px;
+    border: blue 2px solid;
+    float: left;
+}
+
+p {
+    background-color: peru;
+}
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
