@@ -41,7 +41,7 @@
         
         function muestra_mujeres (personas) {
             var arr_mujeres=[];
-            compañeros.forEach(function(valor){
+            personas.forEach(function(valor){
                 if (valor.genero == 2){
                     arr_mujeres.push(valor.nombre);
                 }
@@ -54,7 +54,7 @@
         
         function muestra_hombres (personas) {
             var arr_hombres=[];
-            compañeros.forEach(function(valor){
+            personas.forEach(function(valor){
                 if (valor.genero == 1){
                     arr_hombres.push(valor.nombre);
                 }
@@ -67,7 +67,7 @@
         
         function edades_mujeres (personas) {
             var sum_edad_mujeres=0;
-            compañeros.forEach(function(valor){
+            personas.forEach(function(valor){
                 if (valor.genero == 2){
                     sum_edad_mujeres += valor.edad;
                 }
@@ -76,11 +76,9 @@
         }
         
         
-        
-        
         function edades_hombres (personas) {
             var sum_edad_hombres=0;
-            compañeros.forEach(function(valor){
+            personas.forEach(function(valor){
                 if (valor.genero == 1){
                     sum_edad_hombres += valor.edad;
                 }
@@ -91,7 +89,7 @@
         
         function edades_totales (personas) {
             var sum_edades=0;
-            compañeros.forEach(function(valor){
+            personas.forEach(function(valor){
                 sum_edades += valor.edad;
             })
             console.log(sum_edades);
