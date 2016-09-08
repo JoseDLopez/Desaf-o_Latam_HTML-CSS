@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Desafío Bebidas</title>
+</head>
+<body>
+   <h1>Desafío Bebidas</h1>
+   <!-- Definición
+        Crear una clase Persona, con nombre, edad y método beber bebida.
+        Crear una clase Bebida con propiedades Alcohólica (de tipo boolean) y sorbos. (Cantidad de
+        sorbos)
+        Crear 2 instancias, una persona mayor de edad y otra no, con el nombre que estimen
+        conveniente.
+        Crear las instancias de Bebidas que requieran para resolver el ejercicio.
+        Funcionamiento
+            Las personas pueden beber bebidas.
+        La bebida debe tener un máximo de 10 sorbos (se descontarán al momento que las personas
+        beban). Si los sorbos llegan a 0, entregar mensaje indicando que la bebida está vacía.
+        Si la persona mayor de edad intenta beber una bebida alcohólica debe entregar un mensaje
+        de que la bebida fue bebida correctamente y actualizar la propiedad sorbos (decrementar en
+        una unidad)
+        Si la persona menor de edad intenta beber una bebida alcohólica debe entregar un mensaje
+        de error y la bebida debe seguir llena!
+        Si la persona menor de edad intenta beber una bebida NO alcohólica, entregar mensaje de
+        éxito y actualizar la propiedad sorbos (decrementar en una unidad).
+        Además, debe agregar propiedad de ebriedad a persona. Cada vez que beba un sorbo de una
+        bebida alcohólica la ebriedad debe aumentar. Si la ebriedad llega a más de 15, indicar que la
+        persona se encuentra ebria. Si la ebriedad llega a 25, la persona ya no podrá beber más
+        bebidas alcohólicas.
+        Cualquier persona puede beber un máximo de 30 sorbos de lo que sea
+  -->
+    <script>
+        /* Para crear una clases que sirven de MOLDE para crear objetos
+        se debe crear una funcion que cree el objeto con las propiedades indicadas
+        Y con los valores por defecto que debera tener este objeto.*/
+        
+        //CREAMOS PERSONAS Y BEBIDAS
+        var juan = new Persona("Juan",15,0);
+        var pedro = new Persona("Pedro",23,0);
+        var cuba_libre = new Bebida ("Cuba Libre",true,10);
+        var agua = new Bebida("Agua", false, 10);
+        var coca = new Bebida("Coca Cola",false,10);
+        var pisco = new Bebida("Pisco",true,10);
+        var terremoto = new Bebida("Terremoto",true,10);
+        
+        
+        //Creamos la clase Persona, y ejemplificamos una manera en como crear clases o funciones:
+        function Persona (nombre,edad,ebriedad){
+            this.nombre = nombre || "Sin nombre";
+            this.edad = edad || 18;
+            this.ebriedad = ebriedad || 0;
+            
+            //Vamos a crear la propiedad que corresponde a la accion de beber en las personas
+            this.bebe = function (bebida){
+                
+                //Primero preguntamos si la bebida que desea tomar es alcholica
+                if (bebida.alcoholica == false){
+                    bebida.consumir(this);
+                }else {
+                    
+                    //Vamos a verificar que la persona sea mayor de edad para poder beber
+                    if (this.edad < 18){ // Esto es lo que sucede cuando es menor de edad
+                        console.log("Lo sentimos " + this.nombre + " no tienes permitido beber alcohol, espera " + (18 - this.edad) + " año(s) para probar " + bebida.nombre + "...");
+                    }else {
+                        // Como aseguramos que la persona era mayor de dead pasa lo siguiente:
+                        
+                        //Acá verificamos que la persona no se encuentre efectivamente muy ebrio.
+                        if (this.ebriedad >=25){
+                            console.log(this.nombre + " acabó el trapo y esta desmayado, NO PUEDE BEBER.");
+                        }else { //Debido a que la persona no esta desmayada, puede consumir
+                            bebida.consumir(this);
+                            if (this.ebriedad == 16){
+                            console.log(this.nombre + " se encuentra EBRIO");
+                            }
+                        } 
+                        
+                    }
+                    
+
+                }
+                
+                
+                
+
+                
+
+            }
+            
+        }
+        
+        
+        //Creamos la clase Bebida, y es un ejemplo de la otra manera enque se pueden crear clases o funciones:
+        function Bebida (nombre,alcoholica,sorbos){
+            this.nombre = nombre || "Sin nombre";
+            this.alcoholica = alcoholica || false;
+            this.sorbos = sorbos || 10;
+            
+            this.consumir = function(persona){
+                //Confirmamos que exista bebida que beber, es decir que aun queden sorbos
+                if (this.sorbos == 0){
+                    console.log("Lo sentimos, ya no quedan mas sorbos de " + this.nombre);
+                }else {//Efectivamente queda bebida que beber...
+                    this.sorbos -= 1;
+                    persona.ebriedad +=1;
+                    console.log(persona.nombre + " ha consumido un sorbo de " + this.nombre);
+                }
+            }
+            
+            this.recargar = function (){
+                this.sorbos = 10;
+            }
+        }
+        
+        
+        
+        
+    </script>
+    
+</body>
+</html>
