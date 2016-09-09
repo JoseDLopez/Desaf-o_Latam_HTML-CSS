@@ -2,9 +2,103 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Preguntas de JavaScript</title>
 </head>
 <body>
+    <h1>Preguntas de JAVASCRIPT</h1>
+    
+    <script>
+        //Pregunta 1
+        /*Crear una función que tome los números de un arreglo entregado como parámetro y devuelva
+        la suma de los elementos.
+        Probar con [1,2,3,4,5,6], el resultado debería ser 21, pero debe funcionar cualquier arreglo, si
+        uno de los elementos no es un número debe ser ignorado. */
+        
+        function suma_param_arreglo (arreglo){
+            var total_acumulado = 0;
+            arreglo.forEach(function(valor){
+                total_acumulado += valor;                
+            })
+            console.log(total_acumulado);   
+        }
+        
+        
+        
+        /*Pregunta 2
+        Se ha creado el siguiente algoritmo que busca que el usuario ingrese números e ir
+        sumándolos hasta que se
+        canse, para lo cual ingresará la palabra fin. Este algoritmo no está completo, se pide arreglarlo.
+        var suma = 0;
+        do{
+          var  ingreso = prompt("ingresa un número");
+        }while (ingreso != "fin");
+        console.log(suma)
+        Hint: ocupar isNaN()*/
+        
+        function suma_infinita (){
+            var suma = 0;
+            do {
+                var ingreso = prompt("Ingrese un numero:");
+                if (isNaN(ingreso)==false && ingreso != " " && ingreso != ""){
+                    suma += parseInt(ingreso);    
+                }
+            }while (ingreso != "fin");
+            console.log(suma);
+        }
+        
+        
+        
+        /*Pregunta 3
+        Se pide una función que recibe un arreglo como parámetro y devuelva una copia del arreglo.
+        Probar con un ejemplo sencillo que funcione.*/
+        
+        function copio_arreglo (arreglo) {
+            var copiado = [];
+            arreglo.forEach(function(valor){
+                copiado.push(valor);
+            })
+            return copiado;
+        }
+        
+        
+        
+        /*Pregunta 4
+        El usuario ingresa n en pantalla, se debe dibujar un cuadrado hueco de largo n.
+        Ejemplo si el usuario ingresó 6
+        * * * * * *
+        *         *
+        *         *
+        *         *
+        *         *
+        * * * * * **/
+        
+        function genera_cuadro (n){
+            for (var i = 0;i<n;i++){
+                if (i==0 || i==n-1){
+                    for (var j=0;j<n;j++){
+                        document.write("*");    
+                    }
+                }else{
+                    for (var j=0;j<n;j++){
+                        if (j==0 || j==n-1){
+                            document.write("*");    
+                        }else{
+                            document.write("&nbsp&nbsp");
+                        }
+                    }
+                    
+                }
+                document.write("<br>");
+            }
+        }
+        
+        
+        
+        
+        
+        
+        
+    </script>
     
 </body>
 </html>
