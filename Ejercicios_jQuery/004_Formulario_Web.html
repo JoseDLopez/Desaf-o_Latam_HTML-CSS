@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>004 - Ejercicios JavaScript</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  </head>
+  <body>
+	<!-- Se pide hacer un formulario web, que tenga un input, que permita ingresar un nombre, un input para ingresar un email y un dropdown que permite seleccionar el genero de un usuario.
+
+	Al hacer click en enviar se pide:
+
+	Validar que el email no sea vacío
+	Ingresar los datos dentro del objeto persona y acto seguido guardar este objeto dentro de un arreglo llamado personas -->
+
+
+<!-- Desarrollamos el esqueleto del documento HTML -->
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-md-6 col-md-offset-3">
+				<p class="text-uppercase text-center">llenar formulario</p>
+				<form action="">
+					<div class="form-group">
+						<label for="field_name">Nombre:</label>
+						<input type="text" name="field_name" id="field_name" class="form-control" placeholder="Introduzca su nombre...">	
+					</div>
+
+					<div class="form-group">
+						<label for="field_phone">Teléfono:</label>
+						<input type="tel" name="field_phone" id="field_phone" class="form-control" placeholder="+56 9 xxxx xxxx">	
+					</div>
+
+					<div class="form-group">
+						<label for="field_email">email:</label>
+						<input type="email" name="field_email" id="field_email" class="form-control" placeholder="correo@example.com">	
+					</div>
+					<label>Género:</label>
+					<select class="form-control" id="genere_selector">
+					  <option>Hombre</option>
+					  <option>Mujer</option>
+					  <option>Otro</option>
+					</select>	
+				
+				</form>
+
+				<input class="btn btn-success" type="button" value="ENVIAR">
+
+			</div>
+		</div>
+	</div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+    	//Verificamos que nuestro documento se encuentre listo para poder manipular el DOM
+    	$(document).ready(function() {
+		    console.log( "Estoy listo para ser manipulado!" );
+
+		    //Ahora que sabemos que nuestro documento esta listo para ser manipulado, inicia nuestro codigo jQuery
+
+		    $(.btn).on.click(){
+
+		    };
+
+
+
+
+
+
+
+
+		});
+    </script>
+  </body>
+</html>
