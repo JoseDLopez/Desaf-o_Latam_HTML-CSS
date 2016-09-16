@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"> </script>
+	<style>
+		.tab{display:block;}
+		.close{color:white;}
+	</style>
+</head>
+<body>
+
+<!-- Modificar el HTML de forma que los parrafos en el interior pueden aparecer y desaparecer, se puede modificar tanto el HTML como el script.
+
+Tip: si haces invisible el elemento no podrás clickearlo-->
+
+<div class="section">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. assumenda reprehenderit.</p>
+</div>
+
+<div class="section">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ofenda reprehenderit.</p>
+
+</div>
+
+<div class="section">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Offmenda reprehenderit.</p>
+</div>
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+<!-- DESAFIO DOBLE DROPDOWN -->
+<select name="first_list" id="first_list">
+	<option value="0">--select--</option>
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+</select>
+
+<select name="second_list" id="second_list">
+
+</select>
+
+
+<script>
+
+// Corresponde  al fragmento del ejercicio de ocultar y mostrar los parrafos:
+	$(".section").on('click', function(){
+		if ($(this).attr('class')=='close'){
+			$(this).attr('class','tab');
+			console.log(this);
+			console.log($(this));
+
+		}else {
+			$(this).attr('class','close');
+			console.log(this);
+			console.log($(this));
+		}
+	});
+/////////////////////////////////////////////////////////////////////////////////7
+
+
+//CORRESPONDE AL CODIGO PARA EL DESAFIO DOBLE DROPDOWN
+	function generate_dropdown (x){
+		var opciones ='';
+		for (var i =1; i<4;i++){
+			opciones = opciones + '<option value="' + i + '">' + x + ',' + i + '</option>';
+		}
+		return opciones;
+	}
+
+	$('#first_list').on('change',function(e){
+		var agr_opciones="";
+		var j = $(this).val();
+		agr_opciones = generate_dropdown(j);
+
+		$('#second_list').html(agr_opciones);
+	});
+
+
+
+</script>
+
+</body>
+</html>
