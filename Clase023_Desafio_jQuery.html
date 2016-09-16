@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Desafío 115 : Ejercicios de selectores y métodos de jQuery </title>
+
+	<!-- Agregamos el jQuery a nuestro documento-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+</head>
+<body>
+	<h1>Desafío 115 : Ejercicios de selectores y métodos de jQuery </h1>
+
+	<!--Copiamos el documento ORIGINAL del ejercicio:-->
+	<form>
+		<label name="first_name_label">First name:</label>
+		<br>
+		<input type="text" name="firstname">
+		<br>
+		Last name:
+		<br>
+		<input type="text" name="lastname">
+		<br>
+		<input type="radio" name="sex" value="male" checked>Male
+		<br>
+		<input type="radio" name="sex" value="female" >Female
+		<br>
+		Favorite day of the week:
+		<br>
+		    <select name="fav_day">
+		        <option value="Friday">Friday</option>
+		        <option value="Saturday">Saturday</option>
+		        <option value="Monday">Monday</option>
+		    </select>
+		<br>
+	</form>
+
+	<br><br>
+	    
+	<form>
+		What's your major:
+		<br>
+		<input type="text" name="major">
+		<br>
+		What's your job title:
+		<br>
+		<input type="text" name="job_title">
+		<br>
+
+		Do you like challenges:
+		<br>
+		<input type="radio" name="challenge" value="yes" checked>Yes
+		<br>
+		<input type="radio" name="challenge" value="no">No
+	</form>
+
+
+
+	<script>
+	//ESTOS SON LOS PASOS QUE NOS EXIGEN:
+
+		// 1. Pon tu nombre al atributo value del campo first name
+		// 2. Pon el valor a la pregunta Favorite Day of Week a Monday
+		// 3. Cambia la etiqueta de First name a 'Tu nombre'
+		// 4. Obtén el valor del atributo 'name' del campo Favorite Day of The Week
+		// 5. Escoge la opción Female de la pregunta de género.
+		// 6. Encuentra la primera form del documento y pon el atributo name = personal_info
+		// 7. Encuentra la primera form del documento y pon el atributo name = job_info
+		// 8. Agrega un título h1 a cada una de las formas que diga 'Entrevista personal', 'Entrevista de trabajo' respectivamente
+		// 9. Agrega un título a la pregunta Male/Female 'Gender'
+		// 10. Agrega una pregunta Email: con un input de tipo texto después de last name
+		// 11. Agrega la clase form a ambas formas
+
+		//Solucion:
+
+		//Confirmamos que todo se encuentre cargado correctamente:
+		$(document).ready(function() {
+		console.log('Todo cargado');
+
+		//Ahora que verificamos que todo se encuentra cargado procedemos a dar solucion a los ejercicios:
+
+		// 1. Pon tu nombre al atributo value del campo first name
+		$('input:first').val("Jose");
+		console.log($('input:first').val());
+
+
+		// 2. Pon el valor a la pregunta Favorite Day of Week a Monday
+		$('select').val("Saturday");
+		console.log($('select').val());
+
+
+		// 3. Cambia la etiqueta de First name a 'Tu nombre'
+		$('label:first-of-type').text("Tu nombre:");
+
+
+		// 4. Obtén el valor del atributo 'name' del campo Favorite Day of The Week
+		console.log($('select').attr('name'));
+
+		// 5. Escoge la opción Female de la pregunta de género.
+		$('input:radio[name=sex]:last').prop('checked', true);
+
+
+		// 6. Encuentra la primera form del documento y pon el atributo name = personal_info
+		$('form:first-of-type').attr('name','personal_info');
+		console.log($('form:first-of-type').attr('name'));
+
+
+		// 7. Encuentra el segundo form del documento y pon el atributo name = job_info
+		$('form:last-of-type').attr('name','job_info');
+		console.log($('form:last-of-type').attr('name'));
+
+
+
+		// 8. Agrega un título h1 a cada una de las formas que diga 'Entrevista personal', 'Entrevista de trabajo' respectivamente
+		$('form:first-of-type').prepend('<h1>Entrevista personal<h1>');
+		$('form:last-of-type').prepend('<h1>Entrevista de trabajo<h1>');
+
+
+
+		// 9. Agrega un título a la pregunta Male/Female 'Gender'
+		$('input:radio:first').before('<h3>Gender<h3>');
+
+
+// 10. Agrega una pregunta Email: con un input de tipo texto después de last name
+
+
+
+		});
+
+
+
+	</script>
+	
+</body>
+</html>
