@@ -121,8 +121,13 @@
 		$('input:radio:first').before('<h3>Gender<h3>');
 
 
-// 10. Agrega una pregunta Email: con un input de tipo texto después de last name
+		// 10. Agrega una pregunta Email: con un input de tipo texto después de last name
+		$('input[name="lastname"]').after('<br><label name="email">Email:</label><br><input type="text" name="input_email"><br>');
 
+
+		// 11. Agrega la clase form a ambas formas
+		$('form').attr('class','form');
+		console.log($('form').attr('class'));
 
 
 		});
