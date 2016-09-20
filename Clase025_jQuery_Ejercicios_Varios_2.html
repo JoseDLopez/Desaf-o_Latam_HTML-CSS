@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Ejercicios Varios 2</title>
+
+	<!-- Agregamos el jQuery a nuestro documento-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+</head>
+<!--
+Se pide agregar un botón a la página que al presionarlo agregue el elemento 6, luego el 7 y así suc(1 pto)
+Se pide agregar un botón que elimine el primer elemento de la lista, al agregar un número nuevo nonecesario contar que se borró uno del principio, o sea si va quedando 3, 4, 5 al agregar uno nuevo seguirá siendo el 6. (1 pto)
+Además del botón para agregar, habrá un input, al presionar el botón se debe agregar el contenido dentro (1 pto)
+Además del input hay otro input para ingresar un color, el texto debe aparecer en ese color (1 pto)
+-->
+
+<body>
+	<input type="button" name="btn_agregar" value="Agrega valores" id="btn_agregar">
+	<input type="button" name="btn_eliminar" value="Elimina primer elemento" id="btn_eliminar">
+	<br>
+	<label for="custom_text" class="texto">Introduce un elemento Aleatorio a la lista</label>
+	<input type="text" name="custom_text" id="custom_text">
+	<input type="color" name="color" id="entrada_color">
+
+
+	<ul class="texto">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+
+<script>
+		$(document).ready(function() {
+		// Handler for .ready() called.
+		console.log("El documento ha cargado ok");
+		var cantidad_elementos=5;
+		$('#custom_text').val('').focus();
+
+
+
+		$('#btn_agregar').on('click', function(event){
+			cantidad_elementos+=1;
+			if ($('#custom_text').val() ==""){
+				$('ul').append("<li>"+cantidad_elementos+"</li>");
+			}else {
+				$('ul').append("<li>"+$('#custom_text').val()+"</li>");
+			}
+
+			$('#custom_text').val('').focus();
+
+		});
+
+		$('#btn_eliminar').on('click', function(event){
+			console.log($('li:first-of-type').val());
+			$('li:first').remove();
+			$('#custom_text').val('').focus();
+
+		});
+
+		$('#entrada_color').on('change', function(event){
+			$('.texto').css('color',$(this).val());
+		});
+
+
+
+
+
+
+	});
+</script>
+
+	
+</body>
+</html>
