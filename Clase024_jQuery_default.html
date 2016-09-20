@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Default Behavior</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+<!-- Ejemplo de un default -->
+
+<a id="sin_enlace" href="http://www.google.com">Link a google que no hace evento por defecto.</a>
+	
+
+<script>
+	// Se realiza el codigo de accion para cuando hagan click en el enlace:
+	$("#sin_enlace").on('click',function(event){
+		//ESTE ES EL CODIGO QUE PREVIENE LA FUNCIONALIDAD POR DEFECTO.
+		event.preventDefault();
+		console.log("El enlace no funciona");
+	});
+
+
+</script>
+
+
+
+
+</body>
+</html>
