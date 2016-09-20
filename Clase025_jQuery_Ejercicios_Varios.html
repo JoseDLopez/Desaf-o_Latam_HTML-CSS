@@ -114,7 +114,35 @@
 	// otro arreglo con todos los teléfono de una marca. (1 pto)
 
 
+    var juan = new telefono(2552423,'Huawei','Negro');
+    var pedro = new telefono(445813,'Motorola','Blanco');
+    var cuba = new telefono(1001923,'Huawei','Azul');
+    var agua = new telefono(12383, 'Motorola', 'Blanco');
+    var coca = new telefono(998412,'Huawei','Negro');
+    var pisco = new telefono(760123,'Motorola','Rojo');
+    var terremoto = new telefono(119123,'Nokia','Negro');
 
+
+
+	function telefono(numero,marca,color){
+		this.numero = numero;
+		this.marca = marca;
+		this.color= color || 'TBD';
+		this.c_llamadas = 0;
+		this.llamar = function(){
+			this.c_llamadas +=1;
+		};
+	}
+
+	function marca_de(tlf_array,marca){
+		var arr_marca =[];
+		tlf_array.forEach(function(valor,indice){
+			if (valor.marca==marca){
+				arr_marca.push(valor);
+			}
+		});
+		console.log(arr_marca);
+	}
 
 </script>
 
