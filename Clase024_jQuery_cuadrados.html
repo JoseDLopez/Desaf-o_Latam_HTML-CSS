@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cuadrado de color</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+<style>
+	#Cuadrado_externo{
+	width: 500px;
+	height:500px;
+	background-color: grey;
+	margin: 0;
+	margin-left: auto;
+	margin-right: auto;
+
+	}
+
+	#Cuadrado_intermedio{
+	width: 400px;
+	height:400px;
+	background-color: orange;
+	margin: 0;
+	margin-left: auto;
+	margin-right: auto;
+	position:relative;
+	}
+
+	#Cuadrado_interno{
+	width: 300px;
+	height:300px;
+	background-color: peru;
+	margin: 0;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 5;
+	}
+</style>
+
+
+</head>
+<body>
+<!--Ejercicio donde al hacer click en el cuadro de color, debe cambiar el color del exterior-->
+
+<div id="Cuadrado_externo">
+	<div id="Cuadrado_intermedio">
+		<div id="Cuadrado_interno">
+			
+		</div>
+	</div>
+</div>
+
+
+<script>
+	$(document).ready(function() {
+		// Handler for .ready() called.
+		alert("Hola, mensaje cuando todo se carga");
+
+		// Veremos que pasa cuando le hacen click a un cuadrado
+		$('#Cuadrado_intermedio').on('click',function(event){
+			console.log("Han presionado el cuadrado intermedio");
+			$('#Cuadrado_externo').css('background-color',$(this).css('background-color'));
+		});
+
+		$('#Cuadrado_interno').on('click',function(event){
+			event.stopPropagation(); //Con este comando evitamos que se siga propagando el evento.
+			console.log("Han presionado el cuadrado interno");
+			$('#Cuadrado_intermedio').css('background-color',$(this).css('background-color'));
+		});
+
+	});
+
+
+
+
+
+
+
+</script>
+
+
+
+	
+</body>
+</html>
