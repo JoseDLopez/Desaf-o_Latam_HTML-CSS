@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Ejercicios Varios</title>
+
+	<!-- Agregamos el jQuery a nuestro documento-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+
+
+<script>
+	//------------------------------------------------
+	//PREGUNTA 1 -------------------------------------
+	//------------------------------------------------
+
+	/*Crear una función que tome los números de un arreglo entregado como parámetro y devuelva la suma de los
+	elementos.
+	Probar con [1,2,3,4,5,6], el resultado debería ser 21, pero debe funcionar cualquier arreglo, si uno de los
+	elementos no es un número deber ser ignorado.*/
+
+	function toma_num_sum(arreglo){
+		var suma =0;
+		arreglo.forEach(function (valor,indice){
+			if(typeof(valor)=='number'){
+			suma += valor;	
+			}
+			
+		});
+		alert('El valor total de la suma de '+arreglo+' es '+suma);
+	}
+
+
+
+	//------------------------------------------------
+	//PREGUNTA 2 -------------------------------------
+	//------------------------------------------------
+
+	// Se ha creado el siguiente algoritmo que busca que el usuario ingrese números e ir sumándolos hasta que se
+	// canse, para lo cual ingresará la palabra fin. Este algoritmo no está completo, se pide arreglarlo.
+
+	function pregunta_2(){
+		var suma=0;
+		do {
+			var ingreso = window.prompt("ingresa un numero");
+			if (isNaN(ingreso)==false){
+				suma += parseInt(ingreso);
+			}
+
+		}while(ingreso !="fin");
+		console.log(suma);
+
+	}
+
+
+	//------------------------------------------------
+	//PREGUNTA 3 -------------------------------------
+	//------------------------------------------------
+
+	// Se pide una función que recibe un arreglo como parámetro y devuelva una copia del arreglo.
+	// Probar con un ejemplo sencillo que funcione.
+
+	function copia_arreglo(arreglo_to_copy){
+		var arreglo_copiado = [];
+		arreglo_to_copy.forEach(function(valor,index){
+			arreglo_copiado.push(valor);
+		});
+		console.log(arreglo_to_copy);
+		console.log(arreglo_copiado);
+		if (arreglo_to_copy===arreglo_copiado){
+			console.log("Son los mismos");
+		}else {
+			console.log("Son distintos");
+		}
+	}
+
+
+
+
+	//------------------------------------------------
+	//PREGUNTA 4 -------------------------------------
+	//------------------------------------------------
+	//El usuario ingresa n en pantalla, se debe dibujar un cuadradro hueco de largo n.
+
+	function crear_cuadrado(){
+		var n = parseInt(window.prompt("Ingrese el tamaño del cuadrado que desea construir"));
+
+		for (var i = 0; i<n;i++){
+			for (var j=0;j<n;j++){
+				if (j==0 || j==n-1 || i==0 || i==n-1){
+					document.write('*');
+				}else {
+					document.write('&nbsp&nbsp');
+				}
+			}
+			document.write('<br>');
+		}
+		document.write('fin');
+	}
+
+
+
+	//------------------------------------------------
+	//PREGUNTA 5 -------------------------------------
+	//------------------------------------------------
+	// Crear la clase (con la función constructora) de teléfono. Un teléfono tiene un número asignado que se le pasa
+	// a la función constructora, y carácterístcas como marca y color. (1 pto)
+	// Crear un método que se llame marcar que aumente el contador de llamadas en uno. (1 pto)
+	// Crear un arreglo de teléfonos y crear una función que reciba un arreglo de teléfonos y que permita devolver
+	// otro arreglo con todos los teléfono de una marca. (1 pto)
+
+
+
+
+</script>
+
+	
+</body>
+</html>
