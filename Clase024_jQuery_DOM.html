@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Manipulacion del DOM</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+</head>
+<body>
+
+
+	<p id="demo"> :( </p>
+
+	<br>
+	<br>
+
+	<input type="button" name="cambia_estado" id="cambia_estado" value="Ponme Feliz">
+
+
+<script>
+	$(document).ready(function() {
+		// Handler for .ready() called.
+		console.log("El documento ha cargado en su totalidad");
+
+		$("#cambia_estado").on('click',function (event){
+			if ($('#cambia_estado').attr('value')=="Ponme Feliz"){
+				$('#cambia_estado').attr('value','Ponme Triste');
+				document.getElementById("demo").innerHTML = "=)";
+			}else {
+				$('#cambia_estado').attr('value','Ponme Feliz');
+				document.getElementById("demo").innerHTML = "=(";
+			}
+		});
+		
+
+		
+
+
+
+
+	});
+</script>
+
+
+
+	
+</body>
+</html>

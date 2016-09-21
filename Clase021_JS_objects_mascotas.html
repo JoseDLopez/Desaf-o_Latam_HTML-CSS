@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+<!-- Crear una clase de perso
+na, que tenga nombre, edad, y pueda acariciar a una mascota. Crear
+una clase de mascota, que
+ tenga nombre, edad y
+ pueda ser acariciado. (debe contar cuantas
+veces la mascota ha sido acar
+iciada).
+ Cuando la mas
+cota sea acariciada debe imprimir en
+consola la onomatopeya
+ de la  mas
+cota. -->
+
+
+
+<script>
+var donald = new mascota("pato",3,"cuack");
+var scooby = new mascota("scooby",1,"guau");
+var mickey = new mascota("mickey",5,"TTtstttt ttt");
+var juan = new persona("Juan",18);
+var pedro = new	persona("Pedro",25);
+
+
+
+
+function persona(nombre,edad,acariciar){
+	this.nombre = nombre || "Sin nombre";
+	this.edad = edad || 18;
+	this.acariciar = function(nombre_mascota){
+		nombre_mascota.caricias();
+	}
+
+}
+
+function mascota (nombre,edad,onomatopeya){
+	this.nombre = nombre || "Sin nombre";
+	this.edad = edad || 2;
+	this.cont_caricias = 0;
+	this.caricias = function(){
+		this.cont_caricias +=1;
+		console.log(this.onomatopeya);
+		console.log(this.cont_caricias);
+	}
+	
+	this.onomatopeya= onomatopeya || "sonido representativo";
+}
+
+</script>
+	
+</body>
+</html>
