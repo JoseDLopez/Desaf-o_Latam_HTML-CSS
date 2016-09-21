@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pregunta 3 / Prueba II (javascript/jQuery)</title>
+
+	<!-- JOSE DANIEL LOPEZ -->
+	<!-- 21-Sep-16 -->
+	<!-- DESAFIO LATAM -->
+
+</head>
+<body>
+
+<h1>Pregunta 3 / Prueba II (javascript/jQuery)</h1>
+
+<!-- Se pide modelar el siguiente problema:
+	En una sala de clases hay alumnos, cada alumno tiene notas y un promedio final. Se pide:
+
+	Crear la función constructora alumno que recibe el nombre de éste y un arreglo con las notas
+
+	La función constructora debe revisar que el nombre sea un string y que el arreglo de notas sean integers
+
+	Crear el método promedio que devuelva el promedio de notas de todos los alumnos.
+-->
+
+</body>
+
+<script>
+//Creamos los objetos alumnos para poder ser utilizados.
+
+var jose = new Alumno ("José",[15,20,18]);
+var pedro = new Alumno ("Pedro",[8,5,12]);
+var juan = new Alumno ("Juan",[8,13,20]);
+var diego = new Alumno ("Diego",[3,3,7]);
+
+
+//Creamos la funcion constructora de alumnos:
+function Alumno (name,grades){
+	//Pero debemos verificar que el nombre sea un string:
+	if (typeof(name)=="string"){ //Efectivamente es un string
+		this.nombre = name;
+	}else { //No es un string
+		this.nombre = "Cambiar por nombre";
+	}
+
+	//Corroboramos que el arreglo sean integers
+	var son_int = true;
+
+	grades.forEach(function(valor,indice){//Aqui recorremos el arreglo uno a uno y verificamos que sea un numero
+		if (typeof(valor) != "number"){
+			son_int = false;
+		}
+	});
+
+	if (son_int == true){ //Si al final todos son numeros, asignamos las notas
+		this.notas = grades;
+	}else { //Como todos no fueron numeros asignamos notas por defecto como 0,0,0
+		this.notas = [0,0,0];
+	}
+
+
+	//Creamos el metodo, que permite sacar las el promedio de notas del alumno.
+	this.promedio = function(){
+		// Creamos los valores iniciales
+		var contador_notas = 0;
+		var acum_notas = 0;
+		var promedio_notas =0;
+
+		//Recorremos el arreglo de notas
+		this.notas.forEach(function(valor,indice){
+			contador_notas +=1;
+			acum_notas += valor;
+		});
+
+		//Realizamos la operacion de promediar
+		promedio_notas=acum_notas/contador_notas;
+
+		//Devolvemos el promedio
+		return promedio_notas;
+	}
+
+}
+</script>
+</html>

@@ -13,13 +13,30 @@
 
 <h1>Pregunta 2 / Prueba II (javascript/jQuery)</h1>
 
+<!-- Crear una función que devuelva una copia de un objeto, si el objeto contiene un arreglo éste también debe ser
+una copia. -->
 
-
-
-	
 </body>
 
 <script>
+//Creamos objetos por defecto para poder utilizar la funcion
+
+var objeto1 = {nombre:"Jose",edad:25,consume_alcochol:true,tlf:2554243,preferencias:[6,'casa',true,'azul']};
+var objeto2 = {nombre:"Pedro",edad:30,consume_alcochol:false,tlf:4534324,preferencias:[15,'carro',false,'amarillo',]};
+var objeto3 = {nombre:"Juan",edad:10,consume_alcochol:true,tlf:128855,preferencias:[12,'banco',true,'rojo']};
+var objeto4 = {nombre:"Carlos",edad:18,consume_alcochol:true,tlf:98120,preferencias:[12,'camion',false,'verde']};
+
+
+// Creamos la funcion que realiza la copia una a una de un objeto y devuelve una objeto nuevo.
+function copia(arr_obj){
+	// Lo primero que hacemos es crear una variable nueva, que es donde se agregará este objeto nuevo.
+	var arr_obj_nuevo;
+
+	//Ahora recorreremos el objeto que nos entregaron para realizar la copia.
+	for (var i=0; i<length(arr_obj);i ++){
+		console.log(arr_obj.i);
+	}
+}
 
 
 </script>
