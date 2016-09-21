@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pregunta 1 - Prueba-2 javascript - jQuery</title>
+
+	<!-- JOSE DANIEL LOPEZ -->
+	<!-- 21-Sep-16 -->
+	<!-- DESAFIO LATAM -->
+
+</head>
+<body>
+
+<h1>Pregunta 1 - Prueba-2 javascript - jQuery</h1>
+
+<!-- ¿Cuál es el problema con el siguiente código?
+
+var	alumno1	= {nombre:"Matías",edad:5}
+var	alumno2	= alumno1
+alumno2.nombre = "Sebastián"
+-->
+
+
+	
+</body>
+
+<script>
+	var alumno1 = {nombre:"Matías",edad:5}
+	var alumno2 = alumno1
+	alumno2.nombre = "Sebastian"
+
+	// Inicialmente el codigo tiene problemas de sintaxis ya que no utilizan los ";" al finalizar cada línea.
+	// Sin embargo, esto no entorpece el funcionamiento del programa.
+
+	//El problema rea, es que se estan manipulando el mismo objeto con dos nombres de variables asociados.
+	//Ya que al crear alumno2 partiendo desde alumno1, no se realiza una copia adecuada, sino que simplemente.
+	//Se le esta asignando a la direccion de memoria del objeto alumno1 a alumno2.
+
+	//Es decir, que cuando se manipula alumno2 se esta manipulando el objeto alumno1 y viceversa.
+	// A esto se le llama hacer referencia.
+
+	//Puede ser solucionado, recorriendo el objeto o el arreglo en cada uno de sus elementos, e irlos copiando uno a uno.
+
+
+</script>
+</html>
