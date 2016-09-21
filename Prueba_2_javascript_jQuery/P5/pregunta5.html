@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pregunta 5 / Prueba II (javascript/jQuery)</title>
+
+	<!-- JOSE DANIEL LOPEZ -->
+	<!-- 21-Sep-16 -->
+	<!-- DESAFIO LATAM -->
+
+		<!-- Agregamos el jQuery a nuestro documento-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<style>
+/*Creamos el cuadrado */
+	#cuadrado{
+	width: 200px;
+	height:200px;
+	background-color: grey;
+/*	margin: 0;
+	margin-left: auto;
+	margin-right: auto;*/
+	}
+</style>
+
+
+</head>
+<body>
+
+<h1>Pregunta 5 / Prueba II (javascript/jQuery)</h1>
+
+<!--Crear un cuadradro en pantalla de color, con las teclas de flechas derecha e izquierda se deberá poder mover
+el cuadrado 50px en la dirección respectiva.-->
+
+<div id="cuadrado"></div>
+
+</body>
+
+<script>
+	//Verificamos que nuestro documento se encuentra cargado para la ejecucion.
+	$(document).ready(function() {
+		console.log("Documento cargado");
+
+		//Ahora que sabemos que nuestro documento ha cargado procederemos a manipular los eventos de tecla:
+
+		$(document).keydown(function(event){
+			//$("div").html("Key: " + event.which);
+
+			//Tomamos el valor actual del margen del cuadrado
+			var margin_actual = $('#cuadrado').css('margin-left');
+
+			//Lo convertimos a numero
+			margin_actual = margin_actual.replace("px","");
+			margin_actual = parseInt(margin_actual);
+
+			//Preguntamos que tecla se ha presionado
+			if (event.which == 39){ //Presionan la tecla derecha
+				margin_actual += 50;
+			}else if (event.which == 37){ //Presionan la tecla izquierda
+				margin_actual -= 50;
+			}
+
+			//Asignamos el nuevo margen
+			margin_actual = margin_actual.toString() + "px";
+			$('#cuadrado').css('margin-left',margin_actual);
+		});
+
+
+	});
+
+
+</script>
+</html>
