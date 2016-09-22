@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pregunta 6 / Prueba II (javascript/jQuery)</title>
+
+	<!-- JOSE DANIEL LOPEZ -->
+	<!-- 21-Sep-16 -->
+	<!-- DESAFIO LATAM -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<style>
+	/*Creamos el estilo para que se pueda evidenciar claramente como el espacio entre el div y las listas ordenadas */
+		#div_principal {
+			background-color: grey;
+		}
+
+		ol {
+			padding: 50px;
+			margin: 20px;
+		}
+	</style>
+
+</head>
+<body>
+
+<h1>Pregunta 6 / Prueba II (javascript/jQuery)</h1>
+
+<!-- Se pide crear una página donde se encuentre sólo un div y dentro de éste se encuentre una lista ordenada
+con 3 elementos en la lista, "Elemento 1", "Elemento 2" y "Elemento 3".
+Programar que al hacer click sobre el div se cree un elemento de la lista consecutivo(en este caso "Elemento 4
+" y así sucesivamente), pero que al hacer click sobre un elemento "li", NO se cree el elemento consecutivo.
+-->
+
+<div id="div_principal">
+	<ol>
+		<li>Elemento 1</li>
+		<li>Elemento 2</li>
+		<li>Elemento 3</li>
+	</ol>
+</div>
+
+
+</body>
+
+<script>
+
+	//Verificamos que nuestro documento se encuentra cargado para la ejecucion.
+	$(document).ready(function() {
+		console.log("Documento cargado");
+
+
+		//Creamos la accion para cuando clickeen en el div
+		$('#div_principal').on('click',function(event){
+			//Ya que han clickeado en el DIV debemos incluir un nuevo elemento
+			//Verificamos en que li va:
+			var ultimo = $('ol li').length + 1;
+			$('ol').append("<li>Elemento " + ultimo + "</li>");
+
+		});
+
+		$('ol').delegate('li','click',function(event){
+			//Agregamos el codigo que permite la detencion de propagacion.
+			event.stopPropagation();
+		})
+
+	});
+
+</script>
+
+
+</html>
