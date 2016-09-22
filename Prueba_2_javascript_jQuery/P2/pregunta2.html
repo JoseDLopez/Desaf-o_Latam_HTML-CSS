@@ -32,10 +32,22 @@ function copia(arr_obj){
 	// Lo primero que hacemos es crear una variable nueva, que es donde se agregará este objeto nuevo.
 	var arr_obj_nuevo;
 
-	//Ahora recorreremos el objeto que nos entregaron para realizar la copia.
-	for (var i=0; i<length(arr_obj);i ++){
-		console.log(arr_obj.i);
+	//Verificamos que el objeto no sea nulo ni vacio
+	if(arr_obj === null || typeof(arr_obj) !== 'object'){
+		return arr_obj;
 	}
+
+	//Le damos la estructura al nuevo arreglo igual a la del objeto anterior.
+	arr_obj_nuevo = arr_obj.constructor();
+
+	//recorremos el objeto con cada una de las llaves
+	for (var llave in arr_obj){
+		arr_obj_nuevo[llave] = copia(arr_obj[llave]);
+	}
+
+	//retornamos el arreglo
+	return arr_obj_nuevo;
+
 }
 
 
