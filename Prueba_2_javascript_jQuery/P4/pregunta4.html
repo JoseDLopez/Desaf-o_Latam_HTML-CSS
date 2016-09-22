@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pregunta 4 / Prueba II (javascript/jQuery)</title>
+
+	<!-- JOSE DANIEL LOPEZ -->
+	<!-- 21-Sep-16 -->
+	<!-- DESAFIO LATAM -->
+
+		<!-- Agregamos el jQuery a nuestro documento-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<style>
+</style>
+
+
+</head>
+<body>
+
+<h1>Pregunta 4 / Prueba II (javascript/jQuery)</h1>
+
+<!-- Se pide crear una página que permita al usuario poner texto y darle estilo, para eso tendrá un textarea donde
+podrá escribir, todo lo que escriba debe aparecer como texto a la derecha.
+Además dispondrá de los siguientes controles que modificarán las propiedades del texto a la derecha.
+-->
+
+<!--Además dispondrá de los siguientes controles que modificarán las propiedades del texto a la derecha.
+-­‐ Un selector de colores.
+-­‐ Un input que permita definir el tamaño del texto
+-­‐ Un input que permita definir la	tipografía
+-->
+
+<textarea name="texto_area" id="texto_area" placeholder="Introduzca su texto aca..."></textarea>
+<label for="texto_mostrar" id="texto_mostrar"></label>
+<br>
+<br>
+
+<input type="color" id="s_color">
+<input type="number" id="s_tam">
+<select name="tipografias" id="tipografias">
+	<option value="0">Verdana</option>
+	<option value="1">Comic Sans</option>
+	<option value="2">Times New Roman</option>
+</select>
+
+
+
+</body>
+
+<script>
+	//Verificamos que nuestro documento se encuentra cargado para la ejecucion.
+	$(document).ready(function() {
+		console.log("Documento cargado");
+		$('#texto_area').focus();
+
+
+		$('#texto_area').change(function(event){
+			$('#texto_mostrar').text($('#texto_area').val());
+			//LLAMAMOS A LA FUNCION MOSTRAR
+		});
+
+		$('#s_color').on('change',function(event){
+			$('#texto_mostrar').css('color',$(this).val());
+
+		});
+
+		$('#s_tam').on('change',function(event){
+			$('#texto_mostrar').css('font-size',parseInt($(this).val()));
+
+		});
+
+		$('#tipografias').on('change',function(event){
+			if ($('#tipografias').val()==0){
+				$('#texto_mostrar').css('font-family','Georgia, serif');
+			}else if($('#tipografias').val()==1){
+				$('#texto_mostrar').css('font-family','"Comic Sans MS", cursive, sans-serif');
+			}else if ($('#tipografias').val()==2){
+				$('#texto_mostrar').css('font-family','"Courier New", Courier, monospace');
+			}
+
+		});
+
+
+	});
+
+
+</script>
+</html>
